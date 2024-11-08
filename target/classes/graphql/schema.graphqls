@@ -1,0 +1,23 @@
+type Query {
+    allLivres: [Livre]
+    livreById(idLivre:String):Livre
+}
+
+type Mutation{
+    addLivre(livre:LivreDTO): Livre
+}
+
+type Livre {
+    prix : Float,
+    auteur :  String,
+    titre  : String,
+    idLivre : String
+}
+
+input LivreDTO{
+    prix : Float,
+    auteur : String,
+    titre  : String
+}
+
+
